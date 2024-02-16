@@ -1,3 +1,4 @@
+
 const questions = 
 [
     {
@@ -29,8 +30,13 @@ const questions =
     }
 ]
 
+var rng = Math.floor(Math.random() * questions.length());
+
 const question = document.getElementById('question')
 const answers = document.getElementById('answers_btn')
 const next_btn = document.getElementById('next-btn')
 
 
+
+question.innerHTML = questions[rng]['question'];
+answers.innerHTML = questions[rng]['answers'].map()
