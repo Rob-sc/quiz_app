@@ -32,6 +32,30 @@ html,body{
     text-align: justify;
 }
 
+#answers-incorrect{
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #e86b6b36; /* Color de fondo más oscuro */
+    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
+    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+    color: #fff;
+    width: 100%;
+    text-align: justify;
+}
+
+#answers-correct{
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #6be88a36; /* Color de fondo más oscuro */
+    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
+    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+    color: #fff;
+    width: 100%;
+    text-align: justify;
+}
+
 #answers:hover{
     margin: 5px;
     padding: 20px;

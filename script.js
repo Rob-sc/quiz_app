@@ -5,9 +5,9 @@ const questions =
         "question": "¿Cuál es el animal más grande?",
         "answers": [
             {text: "A. Perro"},
-            {text: "A. Gato"},
-            {text: "A. Rata"},
-            {text: "A. Elefante"},
+            {text: "B. Gato"},
+            {text: "C. Rata"},
+            {text: "D. Elefante"},
         ],
 
         "correct": 'A. Elefante'
@@ -16,56 +16,56 @@ const questions =
         "question": "¿Qué hacemos hoy para comer?",
         "answers": [
             {text: "A. Arroz"},
-            {text: "A. Garbanzos"},
-            {text: "A. Rata"},
-            {text: "A. Elefante"},
+            {text: "B. Garbanzos"},
+            {text: "C. Rata"},
         ],
 
-        "correct": 'A. Elefante'
+        "correct": 'A. Arroz'
     },
     {
         "question": "¿Quien la tine más grande?",
         "answers": [
             {text: "A. Robert"},
-            {text: "A. Roberto"},
-            {text: "A. Rob"},
-            {text: "A. Roberto pito gordo"},
+            {text: "B. Roberto"},
+            {text: "C. Rob"},
+            {text: "D. Roberto pito gordo"},
         ],
 
-        "correct": 'A. Roberto'
+        "correct": 'B. Roberto'
     }
 ]
 
-var rng = Math.floor(Math.random() * questions.length);
+let indexQuestion = 0;
+let score = 0;
 
-const question = document.getElementById('question')
-const answers = document.getElementById('answers_btn')
-const next_btn = document.getElementById('next-btn')
+const nextBtn = document.getElementById('next-btn');
 
-const correct = questions[rng]['correct']
+function startQuiz(){
+    const rng = Math.floor(Math.random() * questions.length);
+    const questionElement = document.getElementById('question');
+    const answersElement = document.getElementById('answers_btn');
+    const correct = questions[rng].correct;
 
-
-let indexQuestion = 0
-let score = 0
-
-console.log(correct)
-
-function starQuiz(){
-    question.innerHTML = questions[rng]['question'];
-    answers.innerHTML = questions[rng]['answers'].map(answer => `<button id='answers'
-    onclick='checkAnswer("${answer.text}" , "${correct}")'>${answer.text}</button>`).join('');
-
+    questionElement.innerHTML = questions[rng].question;
+    answersElement.innerHTML = questions[rng].answers.map(answer => `<button id="answers" onclick="checkAnswer('${answer.text}', '${correct}')">${answer.text}</button>`).join('');
+    nextBtn.style.display = 'none';
 }
 
-
-function checkAnswer(a,b){
-    if ( a == b){
-        console.log('Correcto')
-
-    }else{
-        console.log('Incorrecto')
+function checkAnswer(selectedAnswer, correctAnswer){
+    if (selectedAnswer === correctAnswer){
+        score++;
     }
-    next_btn.style.display = 'block'
+    nextBtn.style.display = 'block';
 }
 
-starQuiz()
+function nextQuestion(){
+    indexQuestion++;
+    if (indexQuestion === questions.length){
+        alert('¡Fin del quiz! Tu puntuación es: ' + score + '/' + questions.length);
+        indexQuestion = 0;
+        score = 0;
+    }
+    startQuiz();
+}
+
+startQuiz();
