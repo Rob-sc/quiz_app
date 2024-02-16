@@ -32,7 +32,7 @@ html,body{
     text-align: justify;
 }
 
-#answers-incorrect{
+.incorrect{
     margin: 5px;
     padding: 20px;
     border-radius: 5px;
@@ -44,7 +44,7 @@ html,body{
     text-align: justify;
 }
 
-#answers-correct{
+.correct{
     margin: 5px;
     padding: 20px;
     border-radius: 5px;

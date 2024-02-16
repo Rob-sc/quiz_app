@@ -10,7 +10,7 @@ const questions =
             {text: "D. Elefante"},
         ],
 
-        "correct": 'A. Elefante'
+        "correct": 'D. Elefante'
     },
     {
         "question": "¿Qué hacemos hoy para comer?",
@@ -39,23 +39,38 @@ let indexQuestion = 0;
 let score = 0;
 
 const nextBtn = document.getElementById('next-btn');
+const answersElement = document.getElementById('answers_btn');
+const buttons = document.getElementById('answers');
 
 function startQuiz(){
     const rng = Math.floor(Math.random() * questions.length);
     const questionElement = document.getElementById('question');
-    const answersElement = document.getElementById('answers_btn');
     const correct = questions[rng].correct;
 
     questionElement.innerHTML = questions[rng].question;
-    answersElement.innerHTML = questions[rng].answers.map(answer => `<button id="answers" onclick="checkAnswer('${answer.text}', '${correct}')">${answer.text}</button>`).join('');
+    answersElement.innerHTML = questions[rng].answers.map(answer => {
+        if (answer.text === correct){
+            return   `<button id="answers" onclick="checkAnswer('${answer.text}', '${correct}')" class="correct"> ${answer.text} </button>`;
+        }else{
+            return   `<button id="answers" onclick="checkAnswer('${answer.text}', '${correct}')" class="incorrect"> ${answer.text} </button>`;
+        }
+        }).join('');
     nextBtn.style.display = 'none';
+    
 }
 
 function checkAnswer(selectedAnswer, correctAnswer){
     if (selectedAnswer === correctAnswer){
         score++;
+
     }
+
     nextBtn.style.display = 'block';
+}
+
+
+function showAnswer(){
+    return buttons.removeAttribute('id');
 }
 
 function nextQuestion(){
