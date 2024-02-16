@@ -1,0 +1,41 @@
+html,body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1f1f1f; /* Color de fondo oscuro */
+    height: 100vh;
+}
+
+.app{
+    background-color: #333; /* Color de fondo más oscuro */
+    color: #eee; /* Color del texto más claro */
+    width: 60vw;
+
+    border-radius: 10px;
+    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
+    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+}
+
+.container{
+    margin: 5%;
+}
+
+p{
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #444; /* Color de fondo más oscuro */
+    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
+    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+}
+
+p:hover{
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #555; /* Color de fondo más oscuro */
+    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
+    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+}
