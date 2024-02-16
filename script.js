@@ -29,4 +29,8 @@ const questions =
     }
 ]
 
-const question = document.getElementById('question') 
+const question = document.getElementById('question')
+const answers = document.getElementById('answers_btn')
+const next_btn = document.getElementById('next-btn')
+
+
