@@ -11,31 +11,41 @@ html,body{
 .app{
     background-color: #333; /* Color de fondo más oscuro */
     color: #eee; /* Color del texto más claro */
-    width: 60vw;
-
     border-radius: 10px;
     border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
 }
 
-.container{
+.quiz{
     margin: 5%;
 }
 
-p{
+#answers{
     margin: 5px;
     padding: 20px;
     border-radius: 5px;
     background-color: #444; /* Color de fondo más oscuro */
     border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+    color: #fff;
+    width: 100%;
+    text-align: justify;
 }
 
-p:hover{
+#answers:hover{
     margin: 5px;
     padding: 20px;
     border-radius: 5px;
     background-color: #555; /* Color de fondo más oscuro */
     border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+}
+
+#next-btn{
+    margin: 5% auto 0;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #9171f8 ;
+    border: 1px solid #eeeeee24;
+    display: none;
 }
