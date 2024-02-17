@@ -14,13 +14,14 @@ html,body{
     border-radius: 10px;
     border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .quiz{
     margin: 5%;
 }
 
-#answers{
+.answers{
     margin: 5px;
     padding: 20px;
     border-radius: 5px;
@@ -30,30 +31,7 @@ html,body{
     color: #fff;
     width: 100%;
     text-align: justify;
-}
-
-.incorrect{
-    margin: 5px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #e86b6b36; /* Color de fondo más oscuro */
-    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
-    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
-    color: #fff;
-    width: 100%;
-    text-align: justify;
-}
-
-.correct{
-    margin: 5px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #6be88a36; /* Color de fondo más oscuro */
-    border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
-    box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
-    color: #fff;
-    width: 100%;
-    text-align: justify;
+    font-size: 18px;
 }
 
 #answers:hover{
@@ -65,7 +43,7 @@ html,body{
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
 }
 
-#next-btn{
+#showBtn,#nextBtn{
     margin: 5% auto 0;
     padding: 20px;
     border-radius: 5px;

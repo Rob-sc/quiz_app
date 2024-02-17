@@ -37,8 +37,10 @@ const questions =
 
 let indexQuestion = 0;
 let score = 0;
+let first_click = true
 
-const nextBtn = document.getElementById('next-btn');
+const nextBtn = document.getElementById("nextBtn")
+const showBtn = document.getElementById("showBtn")
 const answersElement = document.getElementById('answers_btn');
 const buttons = document.getElementById('answers');
 
@@ -46,31 +48,41 @@ function startQuiz(){
     const rng = Math.floor(Math.random() * questions.length);
     const questionElement = document.getElementById('question');
     const correct = questions[rng].correct;
+    first_click = true
 
     questionElement.innerHTML = questions[rng].question;
     answersElement.innerHTML = questions[rng].answers.map(answer => {
         if (answer.text === correct){
-            return   `<button id="answers" onclick="checkAnswer('${answer.text}', '${correct}')" class="correct"> ${answer.text} </button>`;
+            return   `<button id="correct" onclick="checkAnswer('${answer.text}', '${correct}')" class="answers"> ${answer.text} </button>`;
         }else{
-            return   `<button id="answers" onclick="checkAnswer('${answer.text}', '${correct}')" class="incorrect"> ${answer.text} </button>`;
+            return   `<button id="incorrect" onclick="checkAnswer('${answer.text}', '${correct}')" class="answers"> ${answer.text} </button>`;
         }
         }).join('');
+
     nextBtn.style.display = 'none';
-    
+    showBtn.style.display = 'none';
+
 }
 
 function checkAnswer(selectedAnswer, correctAnswer){
-    if (selectedAnswer === correctAnswer){
-        score++;
+    
+    if (first_click)
+        if (selectedAnswer === correctAnswer){
+            score++;
 
-    }
+        }else{
+            first_click = !first_click
+            console.log(first_click)
+        }
 
     nextBtn.style.display = 'block';
+    showBtn.style.display = 'block';
 }
 
 
 function showAnswer(){
-    return buttons.removeAttribute('id');
+    const correctBtn = document.getElementById('correct')
+    correctBtn.style.backgroundColor = "#6be88a36"; 
 }
 
 function nextQuestion(){
