@@ -5,7 +5,7 @@ const questions =
         "question": "¿Cuál es el animal más grande?",
         "answers": [
             {text: "A. Perro"},
-            {text: "B. Gato"},
+            {text: "B. Gato fuera un texto debidamente consturido sería un problema para los botones de abajo? en lugar de la mancha de cuyo nombre no quiero acordarme habia una cabra que comia latas todas las mañanas."},
             {text: "C. Rata"},
             {text: "D. Elefante"},
         ],
@@ -75,8 +75,8 @@ function checkAnswer(selectedAnswer, correctAnswer){
             console.log(first_click)
         }
 
-    nextBtn.style.display = 'block';
-    showBtn.style.display = 'block';
+    nextBtn.style.display = 'inline';
+    showBtn.style.display = 'inline';
 }
 
 

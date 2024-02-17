@@ -14,7 +14,9 @@ html,body{
     border-radius: 10px;
     border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 80vw;
+    min-width: 70vw;
 }
 
 .quiz{
@@ -29,12 +31,12 @@ html,body{
     border: 1px solid #eeeeee24; /* Borde de 2 píxeles sólido con color claro */
     box-sizing: border-box; /* Garantiza que el tamaño total incluya el borde */
     color: #fff;
-    width: 100%;
+    width: 99%;
     text-align: justify;
     font-size: 18px;
 }
 
-#answers:hover{
+.answers:hover{
     margin: 5px;
     padding: 20px;
     border-radius: 5px;
@@ -44,10 +46,11 @@ html,body{
 }
 
 #showBtn,#nextBtn{
-    margin: 5% auto 0;
+    margin: 7% 8% 0% 8%;
     padding: 20px;
     border-radius: 5px;
     background-color: #9171f8 ;
     border: 1px solid #eeeeee24;
     display: none;
+    width: 33%;
 }
