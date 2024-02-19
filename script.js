@@ -4,34 +4,34 @@ const questions =
     {
         "question": "¿Cuál es el animal más grande?",
         "answers": [
-            {text: "A. Perro"},
-            {text: "B. Gato fuera un texto debidamente consturido sería un problema para los botones de abajo? en lugar de la mancha de cuyo nombre no quiero acordarme habia una cabra que comia latas todas las mañanas."},
-            {text: "C. Rata"},
-            {text: "D. Elefante"},
+            {"text": "A. Perro"},
+            {"text": "B. Gato fuera un texto debidamente consturido sería un problema para los botones de abajo? en lugar de la mancha de cuyo nombre no quiero acordarme habia una cabra que comia latas todas las mañanas."},
+            {"text": "C. Rata"},
+            {"text": "D. Elefante"}
         ],
 
-        "correct": 'D. Elefante'
+        "correct": "D. Elefante"
     },
     {
         "question": "¿Qué hacemos hoy para comer?",
         "answers": [
-            {text: "A. Arroz"},
-            {text: "B. Garbanzos"},
-            {text: "C. Rata"},
+            {"text": "A. Arroz"},
+            {"text": "B. Garbanzos"},
+            {"text": "C. Rata"}
         ],
 
-        "correct": 'A. Arroz'
+        "correct": "A. Arroz"
     },
     {
         "question": "¿Quien la tine más grande?",
         "answers": [
-            {text: "A. Robert"},
-            {text: "B. Roberto"},
-            {text: "C. Rob"},
-            {text: "D. Roberto pito gordo"},
+            {"text": "A. Robert"},
+            {"text": "B. Roberto"},
+            {"text": "C. Rob"},
+            {"text": "D. Roberto pito gordo"}
         ],
 
-        "correct": 'B. Roberto'
+        "correct": "B. Roberto"
     }
 ]
 

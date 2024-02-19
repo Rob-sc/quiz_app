@@ -46,11 +46,30 @@ html,body{
 }
 
 #showBtn,#nextBtn{
-    margin: 7% 8% 0% 8%;
+    margin: 7% 8% 0% 12%;
     padding: 20px;
     border-radius: 5px;
     background-color: #9171f8 ;
-    border: 1px solid #eeeeee24;
+    border: 1px solid #eeeeee35;
     display: none;
-    width: 33%;
+    width: 20%;
+    font-size: 16px;
+}
+
+#showBtn:hover,#nextBtn:hover{
+    margin: 7% 8% 0% 12%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #9c80f6 ;
+    border: 1px solid #eeeeee35;
+    display: none;
+    width: 20%;
+    font-size: 16px;
+}
+
+.downBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
